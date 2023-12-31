@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg text-center navigation">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a href="#" class="navbar-brand text-white">
+            <h3>Logo</h3>
+          </a>
+
+          <div
+            class="collapse navbar-collapse d-flex justify-content-around"
+            id="navmenu"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="#home">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="#services">About</a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="#about">Services</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="#doctors">Contact</a>
+              </li>
+              <button
+                class="btn btn-outline-light mx-2"
+                id="loginbtn"
+                style="padding: 0 35px"
+                onmouseover="Login()"
+              >
+                Login
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="wrapper w-25 mx-auto my-5 bg-transparent">
+        <div class="rounded shadow w-100" id="form">
+          <i
+            class="bi bi-x fs-4 px-2 text-white float-end bg-dark border-none"
+            style="border-top-right-radius: 14%; border-bottom-left-radius: 50%"
+            onclick="Close()"
+          ></i>
+          <h3 class="text-dark text-center py-2">Login</h3>
+          <form action="#" method="get" class="m-3 p-3">
+            <div class="my-4">
+              <label for="mail" id="focus" class="inputLabel">Email</label>
+              <i class="icon bi bi-envelope-fill"></i>
+              <input
+                type="text"
+                id="mail"
+                name=" mail"
+                class="form-control-plaintext"
+                onfocus="Focus('focus')"
+                onblur="focusOut('focus')"
+              />
+            </div>
+            <div class="my-4">
+              <label for="pwd" id="pwdId" class="inputLabel">Password</label>
+              <i class="icon2 bi bi-lock-fill"></i>
+              <input
+                type="password"
+                id="pwd"
+                name="password"
+                class="form-control-plaintext"
+                onfocus="Focus('pwdId')"
+                onblur="focusOut('pwdId')"
+              />
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <input type="checkbox" id="rem" name="remember" />
+                <label for="rem" class="mx-1" style="font-size: 14px"
+                  >Remember me</label
+                >
+              </div>
+              <a
+                href="#"
+                class="link1 text-dark text-decoration-none link-offset-2-hover"
+                style="font-size: 14px"
+                >Forgot Password ?</a
+              >
+            </div>
+            <button class="btn btn-dark my-3 w-100">Login</button>
+            <div class="text-center">
+              <span style="font-size: 14px">Don't have an account ?</span>
+              <button
+                class="btn1 link-offset-2-hover fw-bolder border-0 bg-transparent"
+                style="font-size: 14px"
+                onclick=" event.preventDefault(); switchToRegister() "
+              >
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="w-100 shadow d-none" id="form2">
+          <i
+            class="bi bi-x fs-4 px-2 text-white float-end bg-dark border-none"
+            style="border-top-right-radius: 14%; border-bottom-left-radius: 50%"
+            onclick="Close()"
+          ></i>
+          <h3 class="text-dark text-center py-2">REGISTRATION</h3>
+
+          <form action="#" method="get" class="m-3 p-3">
+            <div class="my-4">
+              <label for="user" id="focus2" class="inputLabel">Username</label>
+              <i class="icon3 bi bi-person-fill"></i>
+              <input
+                type="text"
+                id="user"
+                name=" mail"
+                class="form-control-plaintext"
+                onfocus="Focus('focus2')"
+                onblur="focusOut('focus2')"
+              />
+            </div>
+            <div class="my-4">
+              <label for="mail2" id="focus3" class="inputLabel">Email</label>
+              <i class="icon4 bi bi-envelope-fill"></i>
+              <input
+                type="text"
+                id="mail2"
+                name=" mail"
+                class="form-control-plaintext"
+                onfocus="Focus('focus3')"
+                onblur="focusOut('focus3')"
+              />
+            </div>
+            <div class="my-4">
+              <label for="pwd2" id="pwdId2" class="inputLabel">Password</label>
+              <i class="icon5 bi bi-lock-fill"></i>
+              <input
+                type="password"
+                id="pwd2"
+                name="password"
+                class="form-control-plaintext"
+                onfocus="Focus('pwdId2')"
+                onblur="focusOut('pwdId2')"
+              />
+            </div>
+
+            <div class="d-flex align-items-center">
+              <input type="checkbox" id="terms" name="conditions" />
+              <label for="terms" class="mx-1" style="font-size: 14px"
+                >I agree to the terms & conditions</label
+              >
+            </div>
+
+            <button class="btn btn-dark my-3 w-100">Register</button>
+            <div class="text-center">
+              <span style="font-size: 14px">Don't have an account ?</span>
+              <button
+                class="btn1 link-offset-2-hover fw-bolder border-0 bg-transparent"
+                style="font-size: 14px"
+                onclick="event.preventDefault(); switchToLogin()"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
