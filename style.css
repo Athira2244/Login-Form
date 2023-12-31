@@ -76,7 +76,7 @@ input {
 input:checked {
   accent-color: black;
 }
-@media (width<768px) {
+@media (width<992px) {
   .wrapper {
     width: 90% !important;
   }
